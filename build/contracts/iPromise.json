@@ -1,0 +1,48 @@
+{
+  "contract_name": "iPromise",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "delinquent",
+      "outputs": [
+        {
+          "name": "result",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "lienOn",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "startLien",
+      "outputs": [
+        {
+          "name": "result",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    }
+  ],
+  "unlinked_binary": "0x",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1503785472649
+}

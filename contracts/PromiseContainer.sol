@@ -29,11 +29,12 @@ contract PromiseContainer {
       _;
     }
 
-  function PromiseContainer(address _trustee, address _promiseContract,address _controlContract){
+  function PromiseContainer(address _trustee, address _assetContract, address _promiseContract, address _controlContract){
     owner = msg.sender;
     trustee = _trustee;
     promiseContract = _promiseContract;
     controlContract = _controlContract;
+    assetContract = _assetContract;
   }
 
   function defaultContract(){
@@ -48,7 +49,7 @@ contract PromiseContainer {
     }
   }
 
-  function startLien() onlyOwner{
+  function startLien() onlyOwner {
     assert(trustee != 0);
     assert(owner != 0);
     assert(promiseContract != 0);

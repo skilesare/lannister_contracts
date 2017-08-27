@@ -1,0 +1,4 @@
+deployed on ropsten at "0x31c3a1215f9f67d9b8bf975ae0fbf24dc3220b0d"
+
+owned by 0x148311C647Ec8a584D896c04f6492b5D9Cb3a9B0
+

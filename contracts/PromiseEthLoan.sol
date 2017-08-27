@@ -5,7 +5,7 @@ import "./ERC20.sol";
 import "./SafeMath.sol";
 
 
-contract PromiseBankLoan is iPromise {
+contract PromiseEthLoan is iPromise {
     using SafeMath for uint256;
   uint public terms;
   uint public rate;
@@ -59,6 +59,7 @@ contract PromiseBankLoan is iPromise {
 
   function setContainer(address _container) onlyDebtor returns(bool){
     container = _container;
+    return true;
   }
 
   //todo: trustee withdraw funds before lienOn
@@ -73,7 +74,7 @@ contract PromiseBankLoan is iPromise {
 
 
   function calcInterest() constant returns(uint){
-      return (amount * rate) / 10000 / 1 years;
+      return (amount * rate * periodLength) / 10000 / 1 years;
   }
 
   function loanFinished() constant returns(bool){
@@ -96,7 +97,7 @@ contract PromiseBankLoan is iPromise {
   function startLien() onlyContainer returns(bool){
     assert(address(this).balance >= amount);
     lienOn = true;
-    creditor.transfer(amount);
+    debtor.transfer(amount);
     currentTerm = 1;
     contractStart = now;
     return true;

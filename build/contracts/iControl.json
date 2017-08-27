@@ -1,0 +1,71 @@
+{
+  "contract_name": "iControl",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_container",
+          "type": "address"
+        },
+        {
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "name": "_trustee",
+          "type": "address"
+        }
+      ],
+      "name": "canStart",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "bytes4"
+        }
+      ],
+      "name": "trusteeForbidden",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "bytes4"
+        }
+      ],
+      "name": "ownerForbidden",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    }
+  ],
+  "unlinked_binary": "0x",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1503785472649
+}

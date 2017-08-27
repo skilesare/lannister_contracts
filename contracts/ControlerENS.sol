@@ -5,7 +5,7 @@ import "./iENS.sol";
 import "./PromiseContainer.sol";
 
 
-contract ControllerERC20Freeze is iControl {
+contract ControllerENS is iControl {
 
   mapping(address => bytes32) public node;
 
